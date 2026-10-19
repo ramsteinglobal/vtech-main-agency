@@ -702,3 +702,76 @@ body {
   .content-page .process-section__heading { margin-bottom: 1.75rem; }
   .content-page .process-step__number { margin-bottom: 1.25rem; }
 }
+
+/* Magnetic cursor for mouse and trackpad users */
+.magnetic-cursor {
+  --cursor-pull-x: 0px;
+  --cursor-pull-y: 0px;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  width: 3.25rem;
+  height: 3.25rem;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0);
+  transition: opacity .22s ease;
+  will-change: left, top, transform;
+}
+.magnetic-cursor.is-visible { opacity: 1; }
+.magnetic-cursor__ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,255,255,.58);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, rgba(255,255,255,.12), rgba(255,255,255,.015) 62%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 0 22px rgba(167,139,250,.12);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transform: translate3d(var(--cursor-pull-x), var(--cursor-pull-y), 0) scale(.78);
+  transition: transform .28s cubic-bezier(.2,.8,.2,1), border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.magnetic-cursor__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: .3rem;
+  height: .3rem;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 12px rgba(255,255,255,.75);
+  transform: translate(-50%, -50%);
+  transition: transform .25s ease, opacity .25s ease;
+}
+.magnetic-cursor__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font: 700 .48rem/1 sans-serif;
+  letter-spacing: .12em;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.8);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.magnetic-cursor.is-hovering .magnetic-cursor__ring {
+  border-color: rgba(221,211,255,.88);
+  background: radial-gradient(circle at 35% 25%, rgba(167,139,250,.28), rgba(255,255,255,.07) 68%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.28), 0 0 28px rgba(139,92,246,.3);
+  transform: translate3d(var(--cursor-pull-x), var(--cursor-pull-y), 0) scale(1.18);
+}
+.magnetic-cursor.is-hovering .magnetic-cursor__dot { opacity: 0; transform: translate(-50%, -50%) scale(.2); }
+.magnetic-cursor.is-hovering .magnetic-cursor__label:not(:empty) { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.magnetic-cursor.is-pressed .magnetic-cursor__ring { transform: translate3d(var(--cursor-pull-x), var(--cursor-pull-y), 0) scale(.9); }
+body.has-magnetic-cursor,
+body.has-magnetic-cursor a,
+body.has-magnetic-cursor button,
+body.has-magnetic-cursor [role="button"],
+body.has-magnetic-cursor [data-magnetic] { cursor: none !important; }
+body.has-magnetic-cursor input,
+body.has-magnetic-cursor textarea,
+body.has-magnetic-cursor [contenteditable="true"] { cursor: text !important; }
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .magnetic-cursor { display: none; }
+}

@@ -8,6 +8,7 @@ import ServicesPage from './pages/ServicesPage';
 import StudioPage from './pages/StudioPage';
 import ProcessPage from './pages/ProcessPage';
 import ScrollMotion from './components/ScrollMotion';
+import MagneticCursor from './components/MagneticCursor';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function App() {
@@ -55,6 +56,7 @@ export default function App() {
       />
       <Header />
       <ScrollMotion />
+      <MagneticCursor />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/work" element={<WorkPage />} />
