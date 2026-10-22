@@ -18,7 +18,7 @@ export default function WorkPage() {
       desc: 'A cinematic digital welcome for a boutique coastal stay. Quiet typography, ambient coastal transitions, and +3.8x direct reservation growth.',
       tags: ['Web Design', 'Brand System', 'Booking Engine'],
       stat: '+3.8x Direct Bookings',
-      url: 'grandvelora.com',
+      url: 'https://vtech-grandvelora-hotel.vercel.app/',
       gradient: 'from-[#271b14] via-[#1a130f] to-[#0c0a09]',
       borderColor: 'group-hover:border-amber-500/40',
       categories: ['all', 'web', 'brand', 'hospitality'],
@@ -46,7 +46,7 @@ export default function WorkPage() {
       desc: 'A warm, tactile storefront for considered everyday furniture. Custom material swatch interactions, headless Shopify speed, and +54% AOV.',
       tags: ['Headless Shopify', 'Editorial CMS', 'Tactile Swatches'],
       stat: '+54% Order Value',
-      url: 'formaliving.co',
+      url: 'https://vtech-formaliving-furniture-q832.vercel.app/',
       gradient: 'from-[#2a1d17] via-[#1a1412] to-[#0d0b0a]',
       borderColor: 'group-hover:border-orange-500/40',
       categories: ['all', 'web', 'brand', 'b2b'],
@@ -174,6 +174,7 @@ export default function WorkPage() {
             <article
               key={item.id}
               className="studio-card work-list-item group relative cursor-pointer"
+              onClick={() => { window.location.href = item.url; }}
             >
               <div className="border-top-line">
                 <div className="border-fill" />

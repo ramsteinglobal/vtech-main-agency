@@ -25,14 +25,14 @@ export default function Header() {
       <div className={`mx-auto flex max-w-[1440px] items-center justify-between gap-4 rounded-2xl border px-4 md:px-6 transition-all duration-300 ${scrolled ? 'border-white/10 bg-black/70 py-2.5 shadow-2xl backdrop-blur-2xl' : 'border-white/[0.06] bg-black/25 py-3 backdrop-blur-xl'}`}>
         <Link
           to="/"
-          aria-label="CraftPixel home"
+          aria-label="V-Tech home"
           className="group flex shrink-0 items-center gap-3 text-white transition-opacity hover:opacity-90"
         >
           <span className="flex h-10 w-10 items-center justify-center rounded-[14px] border border-white/40 bg-gradient-to-br from-white via-violet-100 to-violet-300 font-syne text-sm font-extrabold tracking-tight text-[#17121f] shadow-[inset_0_1px_1px_rgba(255,255,255,.8),0_5px_18px_rgba(139,92,246,.22)] transition-transform duration-300 group-hover:rotate-[-5deg]">
             CP
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-syne text-[19px] font-bold tracking-[-0.055em]">CraftPixel</span>
+            <span className="font-syne text-[19px] font-bold tracking-[-0.055em]">V-Tech</span>
             <span className="mt-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-neutral-400">Digital Studio</span>
           </span>
         </Link>

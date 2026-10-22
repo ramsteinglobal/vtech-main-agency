@@ -321,7 +321,7 @@ body {
 @media (max-width: 640px) {
   .hero-title { font-size: clamp(5rem, 22vw, 6.5rem); }
 }
-/* Shared CraftPixel glass card system */
+/* Shared V-Tech glass card system */
 .studio-card {
   position: relative;
   isolation: isolate;

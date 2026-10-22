@@ -64,7 +64,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-3">
             <span className="font-syne font-bold text-lg text-black">Vaibhav</span>
-            <span className="text-xs font-sans text-neutral-500 uppercase tracking-wider">— Founder, CraftPixel Studios</span>
+            <span className="text-xs font-sans text-neutral-500 uppercase tracking-wider">— Founder, V-Tech</span>
           </div>
         </div>
 
@@ -102,7 +102,7 @@ export default function Footer() {
                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
                 <span>Booking Q2/Q3 2026 Projects</span>
               </div>
-              <div className="text-neutral-500">CraftPixel Studios — Express API & MongoDB Backend Ready</div>
+              <div className="text-neutral-500">V-Tech — Express API & MongoDB Backend Ready</div>
             </div>
           </div>
 
@@ -170,7 +170,7 @@ export default function Footer() {
         {/* Footer */}
         <footer className="mt-28 pt-10 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500 font-sans gap-6 text-center md:text-left">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <span>© 2026 CraftPixel Studios.</span>
+            <span>© 2026 V-Tech.</span>
             <span>Design with intent. Built to last.</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-black font-semibold uppercase tracking-wider">

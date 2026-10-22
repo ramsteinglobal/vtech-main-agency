@@ -1,6 +1,6 @@
-# CraftPixel Studios — Main Website
+# V-Tech — Main Website
 
-A responsive, single-page agency website for the CraftPixel Studios brief. This project covers the main agency site only; the four client sites are represented as clearly labeled portfolio concepts.
+A responsive, single-page agency website for the V-Tech brief. This project covers the main agency site only; the four client sites are represented as clearly labeled portfolio concepts.
 
 ## Preview
 

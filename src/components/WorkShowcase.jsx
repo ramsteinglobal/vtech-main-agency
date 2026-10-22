@@ -42,7 +42,7 @@ export default function WorkShowcase({ setActiveProject }) {
       <div className="work-showcase__header flex flex-col sm:flex-row sm:items-end justify-between pb-8 border-b border-white/10 gap-4">
         <div>
           <span className="text-xs uppercase font-sans tracking-widest text-neutral-400">Selected Work</span>
-          <span className="work-showcase__index text-xs font-sans text-neutral-500 ml-3">CraftPixel Studios <span aria-hidden="true">·</span> 02 / 04</span>
+          <span className="work-showcase__index text-xs font-sans text-neutral-500 ml-3">V-Tech <span aria-hidden="true">·</span> 02 / 04</span>
         </div>
         <Link
           to="/work"

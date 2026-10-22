@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/35 via-black/25 to-black/55" />
         <div className="absolute z-[2] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-purple-600/15 rounded-full blur-[140px] pointer-events-none" />
         <div className="relative z-10 text-center max-w-6xl mx-auto flex flex-col items-center">
-          <h1 className="hero-title font-syne font-extrabold select-none" aria-label="CraftPixel">
+          <h1 className="hero-title font-syne font-extrabold select-none" aria-label="V-Tech">
             <span>Craft</span>
             <span className="hero-title-accent">Pixel</span>
           </h1>

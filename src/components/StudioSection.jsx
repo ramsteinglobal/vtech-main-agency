@@ -12,7 +12,7 @@ export default function StudioSection() {
       <div className="studio-section__intro">
         <span className="studio-eyebrow">A little about us <span>— 01 / 04</span></span>
         <h2 className="font-syne">An independent studio for ambitious ideas.</h2>
-        <p>CraftPixel brings strategy, design, and engineering together in one close-knit team. We make digital experiences with clarity, character, and care.</p>
+        <p>V-Tech brings strategy, design, and engineering together in one close-knit team. We make digital experiences with clarity, character, and care.</p>
       </div>
       <div className="studio-principles">
         {principles.map((principle) => (
