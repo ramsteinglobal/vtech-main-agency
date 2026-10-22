@@ -6,6 +6,7 @@ export default function WorkShowcase({ setActiveProject }) {
     {
       id: 'velora',
       title: 'The Grand Velora',
+      url: 'https://vtech-grandvelora-hotel.vercel.app/',
       tags: ['Hospitality', 'Web Design'],
       desc: 'Cinematic digital welcome for a boutique coastal stay in Portugal. Quiet typography and +3.8x direct reservation growth.',
       stat: '+3.8x Direct Bookings',
@@ -14,6 +15,7 @@ export default function WorkShowcase({ setActiveProject }) {
     {
       id: 'arogya',
       title: 'Arogya Healthcare',
+      url: 'https://vtech-arogya-hospital-4sgp.vercel.app/',
       tags: ['Healthtech', 'Care Portal'],
       desc: 'Empathetic digital health experience making specialized consultations clear, humane, and immediate.',
       stat: '99.4% Patient Trust',
@@ -22,6 +24,7 @@ export default function WorkShowcase({ setActiveProject }) {
     {
       id: 'forma',
       title: 'Forma Living',
+      url: 'https://vtech-formaliving-furniture-q832.vercel.app/',
       tags: ['Commerce', 'Editorial'],
       desc: 'Warm editorial storefront for considered everyday furniture, tactile material swatches, and frictionless checkout.',
       stat: '+54% Order Value',
@@ -76,12 +79,23 @@ export default function WorkShowcase({ setActiveProject }) {
                     {tag}
                   </span>
                 ))}
-                <Link
-                  to="/work"
-                  className="work-project-card__link inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wider"
-                >
-                  <span>View</span>
-                </Link>
+                {item.url ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="work-project-card__link inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wider"
+                  >
+                    <span>Live Site ↗</span>
+                  </a>
+                ) : (
+                  <Link
+                    to="/work"
+                    className="work-project-card__link inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wider"
+                  >
+                    <span>View</span>
+                  </Link>
+                )}
               </div>
             </div>
             <div className="work-project-card__details rounded-xl bg-neutral-900/60 border border-neutral-800 p-6 flex items-center justify-between">

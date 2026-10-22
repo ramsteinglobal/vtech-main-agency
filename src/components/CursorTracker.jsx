@@ -69,47 +69,35 @@ export default function CursorTracker({ activeProject }) {
           </div>
 
           {/* Arogya */}
-          <div className={`cursor-preview-img bg-gradient-to-br from-[#062420] via-[#09322c] to-[#09090b] flex items-center justify-center p-5 ${activeProject === 'arogya' ? 'visible' : ''}`}>
-            <div className="w-full h-full rounded-xl border border-emerald-500/30 bg-black/50 backdrop-blur p-4 flex flex-col justify-between">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-sans tracking-widest text-emerald-400 uppercase">Healthtech Platform</span>
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              </div>
-              <div className="flex items-center gap-3 my-auto">
-                <div className="w-9 h-9 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-sm font-sans font-bold text-emerald-300">+</div>
-                <div>
-                  <div className="text-xs font-syne font-semibold text-white">Arogya Care Portal</div>
-                  <div className="text-[10px] text-neutral-400 font-sans">Calm Telehealth Journey</div>
-                </div>
-              </div>
-              <div className="flex justify-between items-end pt-2 border-t border-emerald-500/20">
-                <span className="text-[10px] font-sans text-neutral-400">Patient Trust</span>
-                <span className="text-[10px] font-sans text-emerald-300 font-bold">99.4% CSAT</span>
-              </div>
-            </div>
+          <div className={`cursor-preview-img bg-neutral-950 ${activeProject === 'arogya' ? 'visible' : ''}`}>
+            {activeProject === 'arogya' && (
+              <>
+                <iframe
+                  src="https://vtech-arogya-hospital-4sgp.vercel.app/"
+                  title="Arogya Healthcare live hover preview"
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="absolute left-0 top-0 border-0 bg-white"
+                  style={{ width: '250%', height: '250%', transform: 'scale(0.4)', transformOrigin: 'top left' }}
+                />
+              </>
+            )}
           </div>
 
           {/* Forma */}
-          <div className={`cursor-preview-img bg-gradient-to-br from-[#2a1d17] via-[#1a1412] to-[#0d0b0a] flex items-center justify-center p-5 ${activeProject === 'forma' ? 'visible' : ''}`}>
-            <div className="w-full h-full rounded-xl border border-orange-400/30 bg-black/50 backdrop-blur p-4 flex flex-col justify-between">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-sans tracking-widest text-orange-300 uppercase">Objects For Living</span>
-                <span className="text-[10px] font-sans text-neutral-400">Edit 01</span>
-              </div>
-              <div className="space-y-1.5 my-auto">
-                <div className="text-sm font-syne font-bold text-white">Forma Living</div>
-                <div className="flex gap-1.5 items-center">
-                  <span className="w-3 h-3 rounded-full bg-[#8c6239]" />
-                  <span className="w-3 h-3 rounded-full bg-[#4a5d4e]" />
-                  <span className="w-3 h-3 rounded-full bg-[#d5c3aa]" />
-                  <span className="text-[10px] font-sans text-neutral-400 ml-1">Walnut & Velvet</span>
-                </div>
-              </div>
-              <div className="flex justify-between items-end pt-2 border-t border-orange-500/20">
-                <span className="text-[10px] font-sans text-neutral-400">E-Commerce Flow</span>
-                <span className="text-[10px] font-sans text-orange-300 font-bold">+54% Cart Size</span>
-              </div>
-            </div>
+          <div className={`cursor-preview-img bg-neutral-950 ${activeProject === 'forma' ? 'visible' : ''}`}>
+            {activeProject === 'forma' && (
+              <>
+                <iframe
+                  src="https://vtech-formaliving-furniture-q832.vercel.app/"
+                  title="Forma Living live hover preview"
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="absolute left-0 top-0 border-0 bg-white"
+                  style={{ width: '250%', height: '250%', transform: 'scale(0.4)', transformOrigin: 'top left' }}
+                />
+              </>
+            )}
           </div>
 
           {/* Rasayana */}

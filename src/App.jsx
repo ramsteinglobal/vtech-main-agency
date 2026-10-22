@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Navigate, Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
@@ -75,6 +75,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/work" element={<WorkPage />} />
+        <Route path="/work.html" element={<Navigate to="/work" replace />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/studio" element={<StudioPage />} />
         <Route path="/process" element={<ProcessPage />} />
