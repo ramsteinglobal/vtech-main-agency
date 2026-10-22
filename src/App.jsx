@@ -17,6 +17,20 @@ export default function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [pathname]);
+
+    // FIX: Force reload if restored from browser Back-Forward Cache
+  useEffect(() => {
+    const handlePageShow = (event) => {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    };
+    window.addEventListener('pageshow', handlePageShow);
+    return () => {
+      window.removeEventListener('pageshow', handlePageShow);
+    };
+  }, []);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.25,
@@ -25,6 +39,7 @@ export default function App() {
       smoothTouch: false,
       wheelMultiplier: 0.9,
     });
+    
 
     const progressBar = document.getElementById('scroll-progress');
     lenis.on('scroll', (e) => {
