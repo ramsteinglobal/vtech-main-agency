@@ -20,7 +20,7 @@ export default function WorkPage() {
       tags: ['Web Design', 'Brand System', 'Booking Engine'],
       stat: '+3.8x Direct Bookings',
       url: 'https://vtech-grandvelora-hotel.vercel.app/',
-      livePreview: false,
+      livePreview: true,
       gradient: 'from-[#271b14] via-[#1a130f] to-[#0c0a09]',
       borderColor: 'group-hover:border-amber-500/40',
       categories: ['all', 'web', 'brand', 'hospitality'],
