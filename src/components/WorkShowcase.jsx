@@ -33,6 +33,7 @@ export default function WorkShowcase({ setActiveProject }) {
     {
       id: 'rasayana',
       title: 'Rasayana',
+      url: 'https://vtech-rasayana-restaurant.vercel.app/',
       tags: ['Fine Dining', 'Culinary'],
       desc: 'A moody digital home and reservations experience for multi-sensory seasonal tasting menus.',
       stat: '100% Weekend Capacity',
