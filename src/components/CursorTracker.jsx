@@ -101,21 +101,17 @@ export default function CursorTracker({ activeProject }) {
           </div>
 
           {/* Rasayana */}
-          <div className={`cursor-preview-img bg-gradient-to-br from-[#3b120c] via-[#240b07] to-[#09090b] flex items-center justify-center p-5 ${activeProject === 'rasayana' ? 'visible' : ''}`}>
-            <div className="w-full h-full rounded-xl border border-rose-500/30 bg-black/50 backdrop-blur p-4 flex flex-col justify-between">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-sans tracking-widest text-rose-400 uppercase">Fine Dining & Tasting</span>
-                <span className="text-xs text-rose-400">✳</span>
-              </div>
-              <div className="space-y-1 my-auto">
-                <div className="text-xs font-syne font-bold text-white">Rasayana Seasonal</div>
-                <div className="text-[10px] text-neutral-300">A sensory digital culinary home</div>
-              </div>
-              <div className="flex justify-between items-end pt-2 border-t border-rose-500/20">
-                <span className="text-[10px] font-sans text-neutral-400">Weekend Bookings</span>
-                <span className="text-[10px] font-sans text-rose-300 font-bold">100% Capacity</span>
-              </div>
-            </div>
+          <div className={`cursor-preview-img bg-neutral-950 ${activeProject === 'rasayana' ? 'visible' : ''}`}>
+            {activeProject === 'rasayana' && (
+              <iframe
+                src="https://vtech-rasayana-restaurant.vercel.app/"
+                title="Rasayana live hover preview"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="absolute left-0 top-0 border-0 bg-white"
+                style={{ width: '250%', height: '250%', transform: 'scale(0.4)', transformOrigin: 'top left' }}
+              />
+            )}
           </div>
         </div>
       </div>
